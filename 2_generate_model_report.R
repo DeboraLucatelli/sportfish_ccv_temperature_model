@@ -1,13 +1,13 @@
 
-# June 20, 2025
+# July 04, 2025
 
 library(here)
 library(quarto)
 
 # user defined parameters -------------------------------------------------
 
-mean_depth_m <- 10
-start_val <- 2022
+mean_depth_m <- 20
+start_val <- 2020
 
 # export html file --------------------------------------------------------
 
