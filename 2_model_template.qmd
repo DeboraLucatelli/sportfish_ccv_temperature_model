@@ -121,7 +121,7 @@ p <- out_long %>%
   filter(variable != "simulated_water_temperature") %>% 
   ggplot(aes(timestamp_ast, value, color = status)) +
   geom_point(size = 0.5) +
-  scale_color_manual(values = c("#D95F02", "#7570B3")) +
+  scale_color_manual(values = c("#FFD118", "#22A884")) +
   ylab('Temperature (\u00B0C)') +
   facet_wrap(~variable, ncol = 1, scales = "free") +
   theme(axis.title.x = element_blank())
@@ -172,7 +172,7 @@ p <- out_long %>%
   ggplot(aes(timestamp_ast, value, col = variable)) +
   geom_line() +
   scale_color_manual(
-    "Temperature", values = c("darkgrey", "#1B9E77", "#E7298A")
+    "Temperature", values = c("lightgrey", "#063E4D", "#7AD151")
   ) +
   ylab('Temperature (\u00B0C)') +
   facet_wrap(~status, nrow = 2, scales = "free_x") +
@@ -190,7 +190,7 @@ Grey line shows the 1:1 line.
 #| fig-height: 5.5
 
 p <- ggplot(out, aes(observed_water_temperature, simulated_water_temperature)) +
-  geom_point(col = "#7570B3") +
+  geom_point(col = "#414487") +
   geom_abline(slope = 1, intercept = 0, col = "darkgrey", linewidth = 1.5) +
   facet_wrap(~status, nrow = 2) +
   theme(panel.spacing.y = unit(2, "lines"))
